@@ -1,7 +1,11 @@
 import * as S from './style';
+import { dissolve, slide } from 'animations';
 
 // Icons
-import { NextDotJs as NextJsIcon } from '@styled-icons/simple-icons';
+import {
+  NextDotJs as NextJsIcon,
+  Framer as FramerIcon
+} from '@styled-icons/simple-icons';
 
 type Props = {
   title?: string;
@@ -10,11 +14,12 @@ type Props = {
 };
 
 const Main = ({ title, description, illustrationSrc }: Props) => (
-  <S.Container>
+  <S.Container exit={{ opacity: 0 }} initial="initial" animate="animate">
     <NextJsIcon color="white" />
-    <S.Title>{title}</S.Title>
-    <S.Description>{description}</S.Description>
-    <S.Illustration src={illustrationSrc} />
+    <FramerIcon />
+    <S.Title variants={slide.left}>{title}</S.Title>
+    <S.Description variants={slide.down}>{description}</S.Description>
+    <S.Illustration variants={dissolve} src={illustrationSrc} />
   </S.Container>
 );
 
