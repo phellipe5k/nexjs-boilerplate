@@ -1,40 +1,97 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Container = styled(motion.main)`
-  background-color: #345df6;
+  background-color: #ef6029;
   color: #fff;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  padding: 3%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  > svg {
-    padding: 0.5%;
+  justify-content: space-between;
+  padding: 2%;
+`;
+
+export const Left = styled(motion.div)`
+  width: 77%;
+  display: flex;
+  height: 100%;
+`;
+
+export const Top = styled(motion.div)`
+  display: flex;
+  width: 100%;
+  padding: 2%;
+  button {
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    background: none;
+
   }
 `;
 
-export const Logo = styled.img`
-  width: 25rem;
-`;
-
-export const Title = styled(motion.h1)`
-  font-size: 4rem;
-  padding: 2% 0;
-`;
-
-export const Description = styled(motion.p)`
-  font-size: 2rem;
-  padding: 2% 0;
-  width: 60%;
-`;
-
-export const Illustration = styled(motion.img)`
-  width: min(35rem, 100%);
+export const Middle = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
   background-color: white;
-  padding: 0.5%;
-  border-radius: 15px;
+  border-radius: 5px;
+`;
+
+export const Bottom = styled(motion.div)`
+  padding: 2%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  button {
+    width: 130px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    background: none;
+
+  }
+`;
+
+export const Right = styled(motion.div)`
+  width: 20%;
+  display: flex;
+  border-radius: 5px;
+  height: 100%;
+  background-color: white;
+  padding: 2%;
+`;
+
+export const Options = styled(motion.div)`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+`;
+
+export const Block = styled(motion.div)`
+  width: 25%;
+  padding: 2%;
+  height: 150px;
+  background-color: red;
+`;
+
+
+export const Content = styled(motion.div)<{inUse: boolean}>`
+  ${({ inUse }) => css`
+  width: 100%;
+  margin: 4% 0;
+  opacity: ${inUse ? '0.5' : '1'};
+  height: 75px;
+  background-color: green;
+  padding: 2%;
+  cursor: ${inUse ? 'default' : 'pointer'};;
+  border-radius: 5px;`
+}
+
 `;

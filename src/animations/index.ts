@@ -39,3 +39,22 @@ export const tapScale = {
 };
 
 export const hoverScale = { scale: 1.05, transition: { repeat: 'Infinity' } };
+
+
+export const cellVariant = {
+  dragging: {
+    border: "2px dashed #008E95"
+  },
+  inactive: {
+    border: "2px solid #fff"
+  }
+};
+
+export const draggableVariant = {
+  dragging: {
+   scale: 0.8
+  },
+  inactive: {
+   scale: 1
+  }
+};
