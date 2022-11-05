@@ -1,12 +1,8 @@
-import Main from 'components/Main';
+import Text from 'components/Text';
 
 const Home = () => {
   return (
-    <Main
-      title="Next Js Boilerplate"
-      description="NextJS | Typescript | Storybook | Styled Components | Styled Icons | Jest | React Testing Libraries | Eslint | Prettier | PLOP | PWA"
-      illustrationSrc="/assets/motleyCrue.gif"
-    />
+    <Text title="Next Js Boilerplate 2023 - @phellipe5k" />
   );
 };
 
