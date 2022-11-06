@@ -1,14 +1,13 @@
 import * as S from './style';
 import {{pascalCase name}}Types from './types';
-import { FadeScale } from 'styles/animations'
+import { FadeScale } from 'styles/animations';
 
 const {{pascalCase name}} = ({ title = '{{pascalCase name}}' }: {{pascalCase name}}Types) => (
-  <S.Container 
+  <S.Container
     initial="hidden"
     animate="visible"
     variants={FadeScale}
-    transition={FadeScale.transition}
-  >
+    transition={FadeScale.transition}>
     <S.Title data-cy="{{lowerCase name}}">{title}</S.Title>
   </S.Container>
 );

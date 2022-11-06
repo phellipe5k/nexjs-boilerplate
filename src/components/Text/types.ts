@@ -1,3 +1,3 @@
-export default Interface TextTypes  {
-    title?: string;
-  };
+export default interface TextTypes {
+  title?: string;
+}
